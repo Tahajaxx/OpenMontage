@@ -14,7 +14,7 @@
 <Variable name="accent.color" description="لون التدرج المساعد" type="color" default="#24b6e6" value="#24b6e6"/>
 <Variable name="highlight.color" description="تمييز الروابط والازرار" type="color" default="#ffca54" value="#ffca54"/>
 <Variable name="body.background.color" description="لون الخلفية الخارجية" type="color" default="#0b1c37" value="#0b1c37"/>
-<Variable name="body.background" description="صورة وخلفية المدونة" type="background" color="#0b1c37" default="#0b1c37" value="#0b1c37"/>
+<Variable name="body.background" description="صورة وخلفية المدونة" type="background" color="$(body.background.color)" default="$(color) none repeat scroll top left" value="$(color) none repeat scroll top left"/>
 <Variable name="page.back" description="لون خلفية المحتوى" type="color" default="#ffffff" value="#ffffff"/>
 <Variable name="page.text" description="لون النص العادي" type="color" default="#334155" value="#334155"/>
 <Variable name="page.muted" description="لون البيانات الثانوية" type="color" default="#718096" value="#718096"/>
