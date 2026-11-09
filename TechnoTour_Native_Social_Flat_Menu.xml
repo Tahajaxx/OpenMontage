@@ -1587,7 +1587,14 @@ body #tt-v8-masthead #Header1 img{
  color:#fff!important;background-color:#0879d9;
  width:55px!important;height:55px!important;
 }
-#LinkList303 .social-counter .social li .fa-snapchat{background-color:#f5d602!important}
+#LinkList303 .social-counter .social li a .fa-facebook{background-color:#3b5998!important}
+#LinkList303 .social-counter .social li a .fa-twitter{background-color:#1da1f2!important}
+#LinkList303 .social-counter .social li a .fa-linkedin{background-color:#0976b4!important}
+#LinkList303 .social-counter .social li a .fa-rss{background-color:#f26522!important}
+#LinkList303 .social-counter .social li a .fa-youtube{background-color:#e52d27!important}
+#LinkList303 .social-counter .social li a .fa-instagram{background-color:#b836a1!important}
+#LinkList303 .social-counter .social li a .fa-snapchat{background-color:#f5d602!important}
+#LinkList303 .social-counter .social li a .fa-pinterest{background-color:#cc2127!important}
 #LinkList303 .social-counter .social li .fa-pinterest{background-color:#cc2127!important}
 #LinkList303 .social-counter li>div{display:block!important;visibility:visible!important;opacity:1!important;min-height:23px!important}
 #menu-bar .menu-bar li:not(:has(> ul))::after{display:none!important;content:none!important}
