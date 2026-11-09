@@ -2107,7 +2107,7 @@ body #tt-v8-masthead #Header1 img{
  text-align:right!important;white-space:normal!important;
 }
 .post-outer > .comments .comments-info .comments-count:before{
- content:'\\f0e6'!important;font:normal normal normal 16px/1 FontAwesome!important;
+ content:'\f0e6'!important;font:normal normal normal 16px/1 FontAwesome!important;
  color:#1687df!important;margin-left:9px!important;
  display:inline-block!important;vertical-align:middle!important;
 }
@@ -2126,7 +2126,7 @@ body #tt-v8-masthead #Header1 img{
  transition:filter .15s ease,transform .15s ease!important;
 }
 .post-outer > .comments .comments-info .go-respond:before{
- content:'\\f044'!important;font:normal normal normal 15px/1 FontAwesome!important;
+ content:'\f044'!important;font:normal normal normal 15px/1 FontAwesome!important;
  color:#fff!important;margin-left:8px!important;display:inline-block!important;
 }
 .post-outer > .comments .comments-info .go-respond b{
