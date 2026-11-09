@@ -3268,8 +3268,8 @@ function ttWhatsAppShare(event,anchor){
  'use strict';
  var networks={
   facebook:'facebook',twitter:'twitter',linkedin:'linkedin',
-  rss:'rss',youtube:'youtube-play',instagram:'instagram',
-  snapchat:'snapchat-ghost',pinterest:'pinterest-p',
+  rss:'rss',youtube:'youtube',instagram:'instagram',
+  snapchat:'snapchat',pinterest:'pinterest',
   telegram:'telegram',tiktok:'music',whatsapp:'whatsapp',
   threads:'at'
  };
