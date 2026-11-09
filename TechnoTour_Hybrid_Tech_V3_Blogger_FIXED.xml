@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr" b:defaultwidgetversion="2" b:layoutsVersion="3" b:responsive="true" expr:dir="data:blog.languageDirection" expr:lang="data:blog.locale">
+<head>
+<meta charset="UTF-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title><data:view.title.escaped/></title>
+<b:include data="blog" name="all-head-content"/>
+<meta name="theme-color" expr:content="data:skin.vars.keycolor"/>
+<b:skin><![CDATA[
+/*
+<Group description="01 - الهوية والالوان" selector="body">
+<Variable name="keycolor" description="الازرق الرئيسي" type="color" default="#1266d9" value="#1266d9"/>
+<Variable name="accent.color" description="لون التدرج المساعد" type="color" default="#24b6e6" value="#24b6e6"/>
+<Variable name="highlight.color" description="تمييز الروابط والازرار" type="color" default="#ffca54" value="#ffca54"/>
+<Variable name="body.background.color" description="لون الخلفية الخارجية" type="color" default="#0b1c37" value="#0b1c37"/>
+<Variable name="body.background" description="صورة وخلفية المدونة" type="background" color="$(body.background.color)" default="$(color) none repeat scroll top left" value="$(color) none repeat scroll top left"/>
+<Variable name="page.back" description="لون خلفية المحتوى" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="page.text" description="لون النص العادي" type="color" default="#334155" value="#334155"/>
+<Variable name="page.muted" description="لون البيانات الثانوية" type="color" default="#718096" value="#718096"/>
+<Variable name="page.title" description="لون العناوين" type="color" default="#142338" value="#142338"/>
+<Variable name="page.line" description="لون الفواصل والحدود" type="color" default="#e4ebf5" value="#e4ebf5"/>
+<Variable name="card.back" description="لون بطاقات التدوينات" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="card.soft" description="خلفية المربعات الخفيفة" type="color" default="#f3f7fd" value="#f3f7fd"/>
+</Group>
+<Group description="02 - الهيدر والقوائم" selector="header">
+<Variable name="topbar.back" description="اللون الثاني لخلفية الهيدر" type="color" default="#0a1931" value="#0a1931"/>
+<Variable name="topbar.text" description="لون نص الشريط العلوي" type="color" default="#e5efff" value="#e5efff"/>
+<Variable name="nav.back" description="خلفية القائمة الرئيسية" type="color" default="#102f58" value="#102f58"/>
+<Variable name="nav.text" description="لون روابط القائمة" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="header.back" description="خلفية منطقة اللوجو" type="color" default="#0c2344" value="#0c2344"/>
+</Group>
+<Group description="03 - المقالات والشريط الجانبي" selector="main">
+<Variable name="article.back" description="خلفية صفحة المقال" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="article.text" description="لون نص المقال" type="color" default="#263548" value="#263548"/>
+<Variable name="article.link" description="روابط داخل المقالات" type="color" default="#1266d9" value="#1266d9"/>
+<Variable name="sidebar.back" description="خلفية عناصر الشريط الجانبي" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="footer.back" description="خلفية الفوتر" type="color" default="#0b1930" value="#0b1930"/>
+<Variable name="footer.text" description="لون نص الفوتر" type="color" default="#e6f2ff" value="#e6f2ff"/>
+</Group>
+<Group description="04 - الخطوط والمسافات" selector="body">
+<Variable name="body.font" description="الخط العام" type="font" default="normal normal 15px Tahoma, Arial, sans-serif" value="normal normal 15px Tahoma, Arial, sans-serif"/>
+<Variable name="heading.font" description="خط العناوين" type="font" default="normal bold 20px Tahoma, Arial, sans-serif" value="normal bold 20px Tahoma, Arial, sans-serif"/>
+<Variable name="content.width" description="اقصى عرض للموقع" type="length" min="900px" max="1500px" default="1200px" value="1200px"/>
+<Variable name="sidebar.width" description="عرض الشريط الجانبي" type="length" min="230px" max="430px" default="300px" value="300px"/>
+<Variable name="site.padding" description="حواف الموقع الداخلية" type="length" min="10px" max="40px" default="22px" value="22px"/>
+<Variable name="cards.radius" description="استدارة البطاقات" type="length" min="0px" max="30px" default="12px" value="12px"/>
+<Variable name="thumbnail.width" description="عرض صورة المقال في الرئيسية" type="length" min="180px" max="340px" default="255px" value="255px"/>
+</Group>
+*/
+
+
+/* v3 additional customization controls. These appear in Blogger Theme > Customize > Advanced. */
+<Group description="06 - اللمسات والحيوية V3" selector="body">
+<Variable name="masthead.text" description="لون النص بجوار اللوجو" type="color" default="#f0f6ff" value="#f0f6ff"/>
+<Variable name="masthead.secondary" description="نص الهيدر الصغير" type="color" default="#adc6e8" value="#adc6e8"/>
+<Variable name="masthead.glow" description="الإضاءة في أعلى الهيدر" type="color" default="#195fb3" value="#195fb3"/>
+<Variable name="header.tag" description="لون روابط الهيدر الاجتماعية" type="color" default="#204875" value="#204875"/>
+<Variable name="intro.start" description="بداية تدرج ترحيب الرئيسية" type="color" default="#0d3266" value="#0d3266"/>
+<Variable name="intro.end" description="نهاية تدرج ترحيب الرئيسية" type="color" default="#176bd5" value="#176bd5"/>
+<Variable name="intro.text" description="لون نص مقدمة الرئيسية" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="card.hover" description="لون حد البطاقات عند التفاعل" type="color" default="#90c3ff" value="#90c3ff"/>
+<Variable name="label.highlight" description="لون شريط عناوين الأقسام" type="color" default="#18aeea" value="#18aeea"/>
+<Variable name="footer.line" description="فواصل الفوتر" type="color" default="#284667" value="#284667"/>
+<Variable name="article.heading" description="خلفية العناوين داخل المقال" type="color" default="#e9f3ff" value="#e9f3ff"/>
+<Variable name="mobile.nav.back" description="القائمة في الهاتف" type="color" default="#102b52" value="#102b52"/>
+</Group>
+
+/* TECHNOTOUR BLUE / Original Blogger-compatible CSS */
+:root{--tt-blue:$(keycolor);--tt-aqua:$(accent.color);--tt-gold:$(highlight.color);--tt-page:$(page.back);--tt-title:$(page.title);--tt-text:$(page.text);--tt-muted:$(page.muted);--tt-border:$(page.line);--tt-radius:$(cards.radius);--tt-sidebar:$(sidebar.width)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;direction:rtl;background:$(body.background);color:$(page.text);font:$(body.font);line-height:1.85}body:before{display:none}
+a{color:inherit;text-decoration:none}a:hover{color:$(keycolor)}img,iframe{max-width:100%}img{height:auto}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid $(accent.color);outline-offset:3px}::selection{color:white;background:$(keycolor)}
+.tt-site{position:relative;z-index:1;max-width:$(content.width);margin:25px auto;background:$(page.back);min-height:100vh;box-shadow:0 22px 80px rgba(7,28,57,.14);border-radius:6px;overflow:hidden;border-top:4px solid $(keycolor)}
+.tt-topbar{padding:7px $(site.padding);background:$(topbar.back);color:$(topbar.text);display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:42px;font-size:12px}.tt-topbar a{color:inherit}.tt-toplinks .widget-content ul,.tt-toplinks ul{list-style:none;display:flex;gap:12px;flex-wrap:wrap;padding:0;margin:0}.tt-top-links-static{display:flex;align-items:center;gap:12px;list-style:none;margin:0;padding:0}.tt-topbar .tt-top-links-static a{opacity:.85}.tt-topbar .tt-top-links-static a:hover{opacity:1}
+.tt-masthead{display:grid;grid-template-columns:minmax(190px,1fr) minmax(0,2.1fr);gap:26px;align-items:center;min-height:132px;padding:20px $(site.padding);background:$(header.back)}.tt-logo{display:flex;align-items:center;gap:13px;color:$(page.title);font-weight:900;font-size:clamp(21px,3vw,31px);line-height:1.3}.tt-logo:hover{color:$(keycolor)}.tt-mark{display:grid;place-items:center;background:linear-gradient(135deg,$(keycolor),$(accent.color));color:white;min-width:64px;height:64px;border-radius:16px;font:bold 23px Arial;letter-spacing:-2px;box-shadow:0 8px 16px rgba(8,73,156,.14)}.tt-logo img{max-height:90px;max-width:280px;object-fit:contain}.tt-masthead .tt-banner-slot{min-height:32px}.tt-description{display:block;color:$(page.muted);font-size:12px;font-weight:400}
+.tt-nav{background:$(nav.back);color:$(nav.text);margin:0 $(site.padding);border-bottom:3px solid $(keycolor);border-radius:4px;display:flex;align-items:center;min-height:55px;position:relative}.tt-menu-toggle{display:none;color:$(nav.text);border:0;background:transparent;padding:12px 16px;font-size:21px;line-height:1}.tt-nav .widget{flex:1}.tt-nav .widget-content>ul,.tt-nav-links{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:0}.tt-nav .widget-content>ul li,.tt-nav-links li{margin:0}.tt-nav a{color:$(nav.text);display:block;padding:12px 16px;font-weight:700;font-size:13px;transition:background .15s ease}.tt-nav a:hover,.tt-nav a:focus-visible{background:$(keycolor);color:#fff}.tt-search{margin-inline-start:auto;display:flex;align-items:center;max-width:210px;margin-left:12px;flex:0 1 auto}.tt-search input{background:#fff;color:#12253b;border:0;border-radius:5px 0 0 5px;width:135px;min-width:50px;padding:7px 9px;height:35px;direction:rtl}.tt-search button{background:$(keycolor);border:0;color:#fff;height:35px;padding:5px 10px;border-radius:0 5px 5px 0}
+.tt-ad-region{max-width:100%;min-width:0}.tt-ad-region:empty{display:none}.tt-ad-region .widget{margin:0}.tt-ad-region .widget-content{text-align:center;margin:0 auto;overflow:hidden}.tt-ad-region img{max-height:210px;width:auto}.tt-ads-below-nav{padding:12px $(site.padding) 0}.tt-ads-header{min-width:0}.tt-ads-body{margin-bottom:16px}.tt-ads-bottom{margin-top:16px}.tt-banner-slot img{max-width:100%}
+.tt-content{padding:26px $(site.padding)}.tt-grid{display:grid;grid-template-columns:minmax(0,1fr) var(--tt-sidebar);gap:25px;align-items:start}.tt-main{min-width:0}.tt-sidebar{min-width:0}.tt-section-title{font:$(heading.font);color:$(page.title);font-size:20px;line-height:1.6;border-bottom:2px solid $(page.line);padding-bottom:9px;position:relative;margin:0 0 18px}.tt-section-title:after{content:"";position:absolute;right:0;bottom:-2px;height:3px;width:78px;background:linear-gradient(90deg,$(keycolor),$(accent.color))}
+.tt-posts-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:17px}.tt-post-card{display:grid;grid-template-columns:$(thumbnail.width) minmax(0,1fr);border:1px solid $(page.line);border-radius:$(cards.radius);overflow:hidden;background:$(card.back);box-shadow:0 4px 15px rgba(15,37,61,.03);transition:transform .18s,box-shadow .18s}.tt-post-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,37,61,.1)}.tt-thumb{display:block;position:relative;aspect-ratio:16/9;min-height:170px;background:$(card.soft);overflow:hidden}.tt-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}.tt-post-card:hover .tt-thumb img{transform:scale(1.045)}.tt-no-thumb{display:grid;place-items:center;color:$(keycolor);font-weight:900;font-size:21px;background:linear-gradient(135deg,$(card.soft),$(card.hover));height:100%}.tt-post-info{padding:15px 17px 17px}.tt-post-title{font:$(heading.font);font-size:19px;line-height:1.7;margin:0 0 8px;color:$(page.title)}.tt-post-title a{display:block}.tt-date{font-size:12px;color:$(page.muted);display:inline-block}.tt-snippet{margin:10px 0 0;color:$(page.text);font-size:13px;line-height:1.8}.tt-read-more{display:inline-block;background:linear-gradient(125deg,$(keycolor),$(accent.color));color:white!important;padding:5px 15px;border-radius:7px;margin-top:12px;font-size:12px;font-weight:bold}.tt-read-more:hover{filter:brightness(.92)}
+.tt-sidebar .widget{border:1px solid $(page.line);background:$(sidebar.back);padding:17px;border-radius:$(cards.radius);margin-bottom:18px;overflow:hidden}.tt-sidebar .widget h2,.tt-sidebar .widget h3{color:$(page.title);font:$(heading.font);font-size:16px;margin:0 0 12px;padding-bottom:10px;border-bottom:2px solid $(page.line)}.tt-sidebar .widget ul{list-style:none;margin:0;padding:0}.tt-sidebar .widget li{padding:6px 0;border-bottom:1px solid $(page.line)}.tt-sidebar .widget li:last-child{border-bottom:0}.tt-sidebar .item-thumbnail{display:inline-block;vertical-align:middle;width:76px;margin-left:12px}.tt-sidebar .item-title{font-size:13px;font-weight:bold;display:inline}.tt-sidebar .widget input,.tt-sidebar .widget select{max-width:100%}.tt-sidebar .widget .post-title{margin:0;font-size:13px}
+.tt-article{background:$(article.back);border:1px solid $(page.line);border-radius:$(cards.radius);padding:25px;color:$(article.text);overflow-wrap:anywhere}.tt-article h1{font:$(heading.font);font-size:clamp(21px,3vw,29px);line-height:1.6;margin:0 0 10px;color:$(page.title)}.tt-article-meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:$(page.muted);margin-bottom:16px;border-bottom:1px solid $(page.line);padding-bottom:13px}.tt-article-share{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0;border-top:1px solid $(page.line);padding-top:16px}.tt-article-share span{font-weight:bold;color:$(page.title);margin-left:7px}.tt-article-share a{border-radius:7px;background:$(card.soft);border:1px solid $(page.line);font-size:12px;padding:5px 12px;color:$(keycolor);font-weight:bold}.tt-article-share a:hover{color:white;background:$(keycolor)}.tt-article-body{font-size:16px;line-height:2.15;min-width:0}.tt-article-body p{margin:0 0 18px}.tt-article-body h2,.tt-article-body h3,.tt-article-body h4{line-height:1.6;color:$(page.title);margin:23px 0 12px;padding:8px 13px;border-right:4px solid $(keycolor);background:$(card.soft);font-weight:bold;border-radius:4px}.tt-article-body h2{font-size:23px}.tt-article-body h3{font-size:20px}.tt-article-body h4{font-size:17px}.tt-article-body a{color:$(article.link);text-decoration:underline;text-underline-offset:3px}.tt-article-body img{max-width:100%;height:auto;border-radius:7px}.tt-article-body iframe{display:block;max-width:100%;margin:18px auto}.tt-article-body pre{white-space:pre-wrap;direction:ltr;background:$(card.soft);padding:14px;overflow:auto;border-radius:8px}.tt-article-body blockquote{border-right:4px solid $(keycolor);background:$(card.soft);padding:15px 22px;border-radius:7px;margin:20px 0}.tt-article-body ol,.tt-article-body ul{padding-right:28px}.tt-article-body table{display:block;overflow:auto;max-width:100%;border-collapse:collapse}.tt-article-body td,.tt-article-body th{border:1px solid $(page.line);padding:8px 12px}.tt-labels{margin-top:24px;border-top:1px solid $(page.line);padding-top:18px;display:flex;flex-wrap:wrap;gap:8px}.tt-labels a{background:$(card.soft);padding:4px 10px;border-radius:5px;font-size:12px;color:$(keycolor)}.tt-comments{border-top:1px solid $(page.line);margin-top:30px;padding-top:22px}.tt-comments h2{font:$(heading.font);font-size:20px;color:$(page.title)}.tt-comments .comment{border-bottom:1px solid $(page.line);padding:12px 0}.tt-comments .comment-body{font-size:14px;line-height:1.8}.tt-comments .comment-author{font-weight:bold}.tt-comments .comment-time{font-size:12px;color:$(page.muted)}.tt-comments #comment-editor{max-width:100%;min-height:100px}.tt-comments .thread-chrome,.tt-comments .comments-content{max-width:100%}
+.tt-pagination{display:flex;justify-content:center;gap:10px;margin:25px auto}.tt-pagination a{padding:8px 18px;border:1px solid $(page.line);border-radius:8px;font-weight:bold;color:$(keycolor)}.tt-pagination a:hover{background:$(keycolor);color:white}.tt-widget-empty{display:none}
+.tt-footer{background:$(footer.back);color:$(footer.text);padding:26px $(site.padding);margin-top:5px}.tt-footer a{color:$(footer.text)}.tt-footer a:hover{color:$(accent.color)}.tt-footer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.tt-footer .widget{margin-bottom:12px}.tt-footer .widget h2{font-size:17px;margin:0 0 8px;color:#fff}.tt-footer .widget ul{list-style:none;padding:0;margin:0}.tt-footer .widget li{padding:3px 0}.tt-footer-bottom{border-top:1px solid rgba(255,255,255,.16);padding-top:15px;margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;color:$(footer.text)}
+.tt-ad-label{display:none}.tt-mobile-only{display:none}
+@media(max-width:980px){.tt-site{margin:0;border-radius:0}.tt-grid{grid-template-columns:minmax(0,1fr) 250px}.tt-masthead{grid-template-columns:1fr 1.25fr}.tt-posts-grid{gap:14px}.tt-post-title{font-size:15px}}
+@media(max-width:760px){.tt-grid{grid-template-columns:1fr}.tt-sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tt-sidebar .widget{margin:0}.tt-masthead{grid-template-columns:1fr;text-align:center;gap:10px}.tt-masthead .tt-logo{justify-content:center}.tt-nav{display:block}.tt-menu-toggle{display:block}.tt-nav .tt-nav-section{display:none}.tt-nav.tt-menu-open .tt-nav-section{display:block}.tt-nav .widget-content>ul{display:block}.tt-nav-links{display:block}.tt-nav a{padding:10px 14px;border-top:1px solid rgba(255,255,255,.12)}.tt-search{position:absolute;top:8px;left:8px;max-width:165px}.tt-search input{width:114px}.tt-article{padding:18px}.tt-content{padding:18px}}
+@media(max-width:520px){.tt-post-card{display:block}.tt-thumb{min-height:0}.tt-site{border-top-width:3px}.tt-topbar{flex-wrap:wrap;justify-content:center}.tt-masthead{padding:16px}.tt-logo img{max-width:230px}.tt-posts-grid{grid-template-columns:1fr}.tt-sidebar{grid-template-columns:1fr}.tt-footer-grid{grid-template-columns:1fr}.tt-footer-bottom{flex-wrap:wrap;justify-content:center;text-align:center}.tt-content{padding:14px}.tt-article{padding:15px}.tt-article-body{font-size:15px}.tt-thumb{aspect-ratio:16/9}}
+@media print{body:before,.tt-topbar,.tt-nav,.tt-sidebar,.tt-ad-region,.tt-footer,.tt-search,.tt-menu-toggle{display:none!important}.tt-site{max-width:none;box-shadow:none;margin:0}.tt-grid{display:block}.tt-article{border:0}}
+
+
+
+/*
+<Group description="05 - بطاقات وازرار وتاجز" selector="body">
+<Variable name="social.back" description="لون ايقونات وروابط التواصل" type="color" default="#0e66c6" value="#0e66c6"/>
+<Variable name="tags.back" description="خلفية التاجز" type="color" default="#e9f3ff" value="#e9f3ff"/>
+<Variable name="tags.text" description="لون التاجز" type="color" default="#0758ac" value="#0758ac"/>
+<Variable name="card.shadow" description="ظل البطاقات" type="color" default="#dae8f7" value="#dae8f7"/>
+<Variable name="button.back" description="لون زر قراءة المزيد" type="color" default="#1266d9" value="#1266d9"/>
+<Variable name="footer.heading" description="لون عناوين الفوتر" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="counter.text" description="لون عدد الزيارات" type="color" default="#ffffff" value="#ffffff"/>
+<Variable name="quickbar.back" description="لون الشريط تحت القائمة" type="color" default="#eaf4ff" value="#eaf4ff"/>
+</Group>
+*/
+
+
+/* TechnoTour Blue v2 - Community requested full gadgets, lively style and desktop horizontal cards */
+.tt-site{background:$(page.back)}
+.tt-skip-link{position:absolute;right:-9999px;top:0;background:$(keycolor);color:#fff;padding:8px 15px;z-index:9999}.tt-skip-link:focus{right:4px;top:4px}
+.tt-topbar{border-bottom:1px solid rgba(255,255,255,.13)}
+.tt-top-links-static{gap:7px!important}.tt-top-links-static li a{display:block;background:$(social.back);border:1px solid rgba(255,255,255,.17);border-radius:6px;padding:0px 9px;color:white;white-space:nowrap}.tt-top-links-static li:nth-child(2) a{background:#1877f2}.tt-top-links-static a:hover{transform:translateY(-2px);filter:brightness(1.15)}
+.tt-nav{box-shadow:0 5px 0 -2px $(accent.color)}.tt-nav a{transition:background .2s,color .2s,transform .2s}.tt-nav a:hover{box-shadow:inset 0 -3px $(accent.color)}
+.tt-quickbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:11px $(site.padding) 0;padding:7px 15px;background:$(quickbar.back);border:1px solid $(page.line);border-radius:9px;color:$(page.title)}
+.tt-quick-title{font-weight:800;font-size:13px}.tt-quick-title span{color:$(keycolor);margin-right:7px}.tt-quick-links{display:flex;gap:6px;flex-wrap:wrap;list-style:none;margin:0;padding:0}.tt-quick-links a{display:inline-block;padding:4px 10px;border-radius:7px;background:white;border:1px solid $(page.line);font-size:11px;font-weight:bold}.tt-quick-links a:hover{background:$(keycolor);color:white}
+.tt-section-title{display:flex;align-items:center;gap:8px;letter-spacing:0}.tt-section-title:before{content:'✦';font-size:16px;color:$(keycolor)}
+.tt-posts-grid{gap:16px}.tt-post-card{display:flex;flex-direction:row;align-items:stretch;min-width:0;position:relative;overflow:hidden;border-radius:$(cards.radius);border:1px solid $(page.line);box-shadow:0 6px 20px $(card.shadow);transition:transform .2s ease,box-shadow .2s ease}
+.tt-post-card:before{position:absolute;content:'';right:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,$(accent.color),$(keycolor));z-index:3;opacity:.65}.tt-post-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px $(card.shadow)}
+.tt-post-card>.tt-thumb{width:$(thumbnail.width);flex:0 0 $(thumbnail.width);align-self:stretch;min-height:190px;aspect-ratio:auto;order:0}.tt-post-card>.tt-thumb img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover}
+.tt-post-card>.tt-post-info{flex:1 1 auto;min-width:0;padding:14px 19px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;order:1;overflow-wrap:anywhere}.tt-post-title{width:100%;font-size:17px;line-height:1.65;margin:4px 0 6px;overflow-wrap:anywhere}.tt-post-title a:hover{color:$(keycolor)}.tt-snippet{font-size:12px;line-height:1.85;margin:8px 0 4px}.tt-category{color:$(tags.text);font-size:11px;padding:3px 10px;background:$(tags.back);border-radius:30px;border:1px solid $(page.line);font-weight:700;max-width:100%}.tt-category:hover{color:white;background:$(keycolor)}
+.tt-post-actions{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:auto;padding-top:10px}.tt-post-actions .tt-read-more{margin:0;background:$(button.back);box-shadow:0 3px 6px $(card.shadow)}.tt-mini-action{display:inline-flex;align-items:center;border-radius:7px;padding:4px 9px;border:1px solid $(page.line);background:$(card.soft);color:$(page.text);font-weight:700;font-size:11px}.tt-mini-action:hover{color:white;background:$(social.back)}
+.tt-sidebar .widget{position:relative;box-shadow:0 3px 15px $(card.shadow);border-top:3px solid $(keycolor);padding:16px}.tt-sidebar .widget h2,.tt-sidebar .widget h3{font-size:15px}.tt-sidebar .widget .widget-content{font-size:13px}.tt-sidebar .widget a:hover{color:$(keycolor)}
+.tt-social-group .widget-content ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;list-style:none;padding:0;margin:0}.tt-social-group .widget-content li{padding:0;border:0}.tt-social-group .widget-content a{background:$(social.back);color:white!important;display:block;border-radius:8px;padding:8px;text-align:center;font-weight:800}.tt-social-group .widget-content li:nth-child(2) a{background:#1877f2}.tt-social-group .widget-content a:hover{filter:brightness(1.16);transform:translateY(-2px)}
+.tt-sidebar .label-size,.tt-sidebar .cloud-label-widget-content a,.tt-footer .label-size,.tt-footer .cloud-label-widget-content a{display:inline-block;margin:3px;padding:4px 10px;background:$(tags.back);color:$(tags.text);border-radius:6px;border:1px solid $(page.line);font-size:12px}
+.tt-sidebar .label-size a{color:$(tags.text)}.tt-sidebar .list-label-widget-content li a{display:block;padding:4px}.tt-sidebar .label-count{float:left;color:$(page.muted)}
+.tt-sidebar .FeaturedPost .item-thumbnail,.tt-footer .FeaturedPost .item-thumbnail{display:block;float:none;width:100%;margin:0 0 12px;max-width:none}.tt-sidebar .FeaturedPost .item-thumbnail img,.tt-footer .FeaturedPost .item-thumbnail img{display:block;width:100%;height:auto;max-height:160px;object-fit:cover;border-radius:8px}.tt-sidebar .FeaturedPost h3,.tt-footer .FeaturedPost h3{font-size:14px}.tt-sidebar .Stats .widget-content .text-counter-wrapper{font-size:29px;color:$(keycolor);font-weight:900;text-align:center}
+.tt-article h1{position:relative;border-right:5px solid $(keycolor);padding-right:15px}.tt-article-share{display:flex;flex-wrap:wrap;gap:8px}.tt-article-share a,.tt-article-share button{border-radius:50px;background:$(card.soft);border:1px solid $(page.line);font-family:inherit;font-size:13px;padding:5px 13px;cursor:pointer;font-weight:bold;color:$(tags.text)}.tt-article-share a:nth-of-type(1){background:#1877f2;color:#fff}.tt-article-share a:nth-of-type(2){background:#20a45a;color:white}.tt-article-share button:hover{background:$(keycolor);color:#fff}
+.tt-labels strong{align-self:center;color:$(page.title);margin-left:8px}.tt-labels a{background:$(tags.back);color:$(tags.text);border:1px solid $(page.line);border-radius:100px;font-size:12px;padding:5px 13px}.tt-labels a:hover{background:$(keycolor);color:#fff}
+.tt-footer{background:$(footer.back);border-top:4px solid $(keycolor);padding-top:30px}.tt-footer-rich{grid-template-columns:1.05fr 1fr 1.1fr 1fr;gap:19px}.tt-footer .tt-foot-col{min-width:0}.tt-footer .tt-foot-col .widget{margin-bottom:20px;padding:0 0 12px;border-bottom:1px solid rgba(255,255,255,.12)}.tt-footer .widget h2,.tt-footer .widget h3{color:$(footer.heading);border-bottom:1px solid rgba(255,255,255,.18);font-size:15px;padding-bottom:8px;margin:0 0 12px}.tt-footer .widget h2:after{content:'';display:block;width:36px;height:2px;background:$(accent.color);margin-top:8px}
+.tt-footer .widget ul{padding:0;margin:0}.tt-footer .widget li{padding:5px 0}.tt-footer .widget p{font-size:12px;line-height:1.9}.tt-footer .tt-foot-col .LinkList a{display:inline-block;padding:3px 0}.tt-footer .tt-foot-col .LinkList li{border:0}
+.tt-footer .Stats .text-counter-wrapper{font-size:30px;color:$(counter.text);font-weight:900}.tt-footer .Stats .widget-content{display:flex;gap:10px;align-items:center}
+.tt-footer .ContactForm form{display:grid;gap:8px}.tt-footer .ContactForm input,.tt-footer .ContactForm textarea{font:inherit;width:100%;border:1px solid rgba(255,255,255,.24);border-radius:7px;padding:7px 10px;background:rgba(255,255,255,.09);color:$(footer.text);outline-offset:2px;resize:vertical}.tt-footer .ContactForm textarea{min-height:65px}.tt-footer .ContactForm input[type=button]{cursor:pointer;background:$(keycolor);color:#fff;font-weight:bold;border:0}.tt-footer .ContactForm input[type=button]:hover{filter:brightness(1.15)}
+.tt-footer .FeaturedPost .item-thumbnail{max-width:240px}.tt-footer .FeaturedPost .item-thumbnail img{max-height:135px}.tt-footer .FeaturedPost h3 a{color:$(footer.text)}
+.tt-footer .cloud-label-widget-content a{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.16);color:#fff}.tt-footer .label-size{background:rgba(255,255,255,.1);border:0}.tt-footer .label-size a{color:#fff}.tt-footer .list-label-widget-content a{display:block;color:$(footer.text)}
+.tt-to-top{position:fixed;left:24px;bottom:22px;width:42px;height:42px;border:0;border-radius:50%;color:white;background:$(keycolor);box-shadow:0 5px 16px #0d386c55;opacity:0;visibility:hidden;transform:translateY(12px);z-index:100}.tt-to-top.tt-is-visible{opacity:1;visibility:visible;transform:translateY(0)}.tt-to-top:hover{background:$(accent.color)}
+@media(max-width:1100px){.tt-footer-rich{grid-template-columns:repeat(2,minmax(0,1fr))}.tt-post-card>.tt-thumb{width:230px;flex-basis:230px}}
+@media(max-width:760px){.tt-quickbar{flex-wrap:wrap;justify-content:center}.tt-post-card>.tt-thumb{width:35%;flex-basis:35%}.tt-sidebar{display:block}.tt-sidebar .widget{margin-bottom:14px}}
+@media(max-width:560px){.tt-post-card{display:flex;flex-direction:column}.tt-post-card>.tt-thumb{width:100%;height:auto;min-height:0;flex-basis:auto;aspect-ratio:16/9}.tt-post-card>.tt-thumb img{position:absolute;height:100%}.tt-post-card>.tt-post-info{padding:14px 15px}.tt-footer-rich{grid-template-columns:1fr}.tt-quick-title{display:none}.tt-quick-links{justify-content:center}.tt-topbar{gap:6px}.tt-to-top{left:12px;bottom:14px}}
+@media print{.tt-quickbar,.tt-post-actions,.tt-to-top{display:none!important}}
+
+/* Respect user-selected background photos */
+body.tt-has-background-image:before{display:none}
+
+
+/* ==========================================================================
+ TECHNOTOUR HYBRID TECH v3  | dark two-row header · user background image
+ ========================================================================== */
+body {background:$(body.background);background-color:$(body.background.color);color:$(page.text)}
+body:before{display:none!important}
+.tt-site{border-top:4px solid $(accent.color);box-shadow:0 20px 65px rgba(0,15,39,.22);border-radius:10px;margin:28px auto 36px;max-width:$(content.width)}
+.tt-masthead{position:relative;background:linear-gradient(115deg,$(header.back) 10%,$(topbar.back) 96%);color:$(masthead.text);display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,1.65fr);gap:26px;padding:20px $(site.padding) 18px;min-height:126px;align-items:center;overflow:hidden;isolation:isolate}
+.tt-masthead:before{content:"";position:absolute;left:-80px;top:-115px;width:340px;height:240px;border-radius:50%;background:radial-gradient(circle,$(masthead.glow),transparent 67%);opacity:.18;z-index:-1;pointer-events:none}
+.tt-masthead:after{content:"";position:absolute;inset:auto $(site.padding) 0; height:1px;background:linear-gradient(90deg,transparent,$(keycolor),$(accent.color),transparent);opacity:.7}
+.tt-brand-stack{display:flex;flex-direction:column;gap:7px;min-width:0;align-items:flex-start}
+.tt-brand-stack .tt-logo{font-weight:900;font-size:clamp(23px,3.2vw,34px);color:$(masthead.text)!important;line-height:1.15}
+.tt-brand-stack .tt-logo:hover{color:#fff!important}
+.tt-brand-stack .tt-logo img{max-width:260px;max-height:85px}
+.tt-brand-stack .tt-mark{box-shadow:0 8px 22px rgba(0,130,255,.25);border:1px solid rgba(255,255,255,.26)}
+.tt-brand-stack .tt-description{font-size:11px;color:$(masthead.secondary)!important;letter-spacing:.03em;margin-top:5px}
+.tt-brand-stack #tt_topline{color:$(masthead.secondary);font-size:11px;line-height:1.6}
+.tt-brand-stack #tt_topline .widget{margin:0}
+.tt-brand-stack #tt_top_social{width:100%}
+.tt-brand-stack #tt_top_social .widget{margin:0}
+.tt-brand-stack .tt-top-links-static{display:flex;flex-wrap:wrap;gap:6px;margin:1px 0 0;padding:0;list-style:none}
+.tt-brand-stack .tt-top-links-static li{list-style:none}
+.tt-brand-stack .tt-top-links-static a{display:inline-flex;align-items:center;padding:2px 12px;background:$(header.tag);border:1px solid rgba(182,215,255,.15);border-radius:30px;color:$(masthead.text);font-size:11px;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.tt-brand-stack .tt-top-links-static a:hover{transform:translateY(-2px);background:$(keycolor);border-color:$(accent.color);color:white}
+.tt-banner-slot{display:flex;align-items:center;justify-content:flex-end;min-height:48px}
+.tt-banner-slot .widget{max-width:100%}
+.tt-banner-slot img{max-height:98px;object-fit:contain}
+.tt-banner-placeholder{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:72px;padding:15px;border:1px dashed rgba(137,190,249,.27);border-radius:10px;background:linear-gradient(135deg,rgba(22,100,193,.09),rgba(4,17,35,.06));text-align:center;color:$(masthead.secondary);font-size:12px}
+.tt-banner-slot:has(.widget) .tt-banner-placeholder{display:none}
+.tt-masthead:not(:has(.tt-banner-slot .widget)){grid-template-columns:1fr;min-height:105px}
+.tt-nav{border-radius:0;margin:0;min-height:55px;padding:0 $(site.padding);background:$(nav.back);border-bottom:2px solid $(keycolor);box-shadow:inset 0 1px rgba(255,255,255,.08);position:relative}
+.tt-nav .widget-content>ul,.tt-nav-links{gap:2px}
+.tt-nav .tt-nav-links a{padding:12px 14px;border-radius:4px 4px 0 0;font-size:13px;position:relative}
+.tt-nav .tt-nav-links a:after{content:"";height:2px;position:absolute;bottom:0;right:14px;left:14px;transform:scaleX(0);transition:transform .2s ease;background:$(accent.color)}
+.tt-nav .tt-nav-links a:hover{background:rgba(255,255,255,.06)!important;color:#fff!important}
+.tt-nav .tt-nav-links a:hover:after,.tt-nav .tt-nav-links a:focus-visible:after{transform:scaleX(1)}
+.tt-search{margin-inline-start:auto;margin-inline-end:0;max-width:210px}
+.tt-search input{border-radius:8px 0 0 8px;background:rgba(255,255,255,.96);min-width:75px}
+.tt-search button{border-radius:0 8px 8px 0;background:$(keycolor)}
+.tt-content{padding:23px $(site.padding) 28px}
+.tt-home-intro{background:linear-gradient(112deg,$(intro.start),$(intro.end));color:$(intro.text);border-radius:14px;margin-bottom:18px;padding:20px 28px;box-shadow:0 8px 20px rgba(16,94,203,.14);position:relative;overflow:hidden}
+.tt-home-intro:after{content:"";position:absolute;left:-32px;top:-46px;width:170px;height:170px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 25px rgba(255,255,255,.045),0 0 0 53px rgba(255,255,255,.025);pointer-events:none}
+.tt-home-intro .widget{position:relative;z-index:1;margin:0}
+.tt-home-intro .widget-content{color:$(intro.text)}
+.tt-home-intro h2{font-size:clamp(19px,2.1vw,26px);line-height:1.45;color:$(intro.text);margin:2px 0 3px;font-weight:900}
+.tt-home-intro p{line-height:1.85;font-size:13px;margin:3px 0 0;color:$(intro.text);opacity:.86}
+.tt-home-intro .tt-intro-kicker{font-size:10px;letter-spacing:1px;opacity:.84;font-weight:800}
+.tt-quickbar{margin:0 0 21px;padding:7px 15px;border-radius:10px;background:$(quickbar.back);border-color:$(page.line)}
+.tt-quickbar .tt-quick-title{font-size:12px}
+.tt-quick-links a{background:white;transition:transform .2s ease,background .2s ease}
+.tt-quick-links a:hover{transform:translateY(-2px)}
+.tt-section-title,.tt-sidebar .widget h2,.tt-sidebar .widget h3{position:relative;padding-bottom:8px}
+.tt-section-title:after,.tt-sidebar .widget h2:after,.tt-sidebar .widget h3:after{content:"";display:block;width:38px;height:3px;border-radius:10px;margin-top:8px;background:linear-gradient(90deg,$(keycolor),$(label.highlight))}
+.tt-post-card{border-color:$(page.line);box-shadow:0 5px 19px rgba(12,41,83,.05);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.tt-post-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(11,60,117,.13);border-color:$(card.hover)}
+.tt-post-card:before{height:3px;opacity:.85;background:linear-gradient(90deg,$(keycolor),$(label.highlight))}
+.tt-post-title a:hover{color:$(keycolor)}
+.tt-category{letter-spacing:0;border:1px solid rgba(0,100,220,.08);font-weight:700}
+.tt-post-actions{margin-top:auto;padding-top:11px}
+.tt-read-more{background:linear-gradient(105deg,$(keycolor),$(accent.color));box-shadow:0 5px 13px rgba(18,102,217,.14);border:0}
+.tt-read-more:hover{filter:brightness(1.08);box-shadow:0 7px 17px rgba(18,102,217,.21)}
+.tt-thumb img{transition:transform .28s ease}
+.tt-sidebar .widget{border-color:$(page.line);border-top:2px solid $(card.hover);box-shadow:0 4px 15px rgba(10,40,80,.04)}
+.tt-sidebar .widget:hover{box-shadow:0 8px 20px rgba(8,62,120,.075)}
+#tt_featured>.widget{border:1px solid $(page.line);border-radius:13px;background:linear-gradient(120deg,$(card.back),$(card.soft));padding:17px 20px;margin:0 0 22px;box-shadow:0 5px 15px rgba(10,57,115,.07);border-inline-start:4px solid $(accent.color)}
+#tt_featured>.widget h2{margin:0 0 9px;padding-bottom:7px;font-size:18px;color:$(page.title)}
+#tt_featured .item-title a,#tt_featured .post-title a{font-size:17px;font-weight:800;color:$(page.title)}
+#tt_featured .item-thumbnail img,#tt_featured .post-thumb img{width:100%;max-height:280px;object-fit:cover;border-radius:8px}
+.tt-article{padding:clamp(16px,3vw,30px);line-height:1.95}
+.tt-article h1{border-bottom:2px solid $(page.line);padding-bottom:12px}
+.tt-article-body h2,.tt-article-body h3,.tt-article-body h4{background:$(article.heading);border-right:4px solid $(keycolor);border-radius:5px;margin:25px 0 12px;padding:8px 16px;color:$(page.title);line-height:1.7}
+.tt-article-body blockquote{border-right:4px solid $(accent.color);border-radius:8px;background:$(card.soft);padding:11px 18px;margin:22px 0;color:$(page.title)}
+.tt-article-body pre{max-width:100%;overflow:auto;direction:ltr;white-space:pre}
+.tt-article-body iframe{max-width:100%}
+.tt-more-topics{margin-top:15px}
+.tt-more-topics:has(.widget){padding:16px 20px;border-radius:12px;background:$(card.soft);border:1px solid $(page.line)}
+.tt-more-topics .widget h2{margin:0 0 8px;font-size:17px;color:$(page.title)}
+.tt-more-topics .widget-content ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:9px}
+.tt-more-topics .widget-content a{display:inline-block;padding:7px 12px;border-radius:7px;background:white;border:1px solid $(page.line);font-weight:700;color:$(keycolor)}
+.tt-more-topics .widget-content a:hover{background:$(keycolor);color:white}
+.tt-footer{border-top:3px solid $(accent.color);background:linear-gradient(135deg,$(footer.back),$(topbar.back));padding-top:32px}
+.tt-footer .tt-foot-col{position:relative;padding-top:3px}
+.tt-footer .tt-foot-col:before{content:"";position:absolute;top:0;right:0;left:0;height:1px;background:linear-gradient(90deg,$(accent.color),$(footer.line),transparent)}
+.tt-footer .widget h2,.tt-footer .widget h3{font-size:15px;letter-spacing:.01em;color:$(footer.heading)}
+.tt-footer .widget{color:$(footer.text)}
+.tt-footer .tt-footer-bottom{border-top:1px solid $(footer.line)}
+.tt-to-top{box-shadow:0 5px 20px rgba(12,40,91,.18)}
+@media(max-width:980px){.tt-masthead{grid-template-columns:minmax(200px,1fr) minmax(0,1.1fr);min-height:106px}.tt-nav .tt-nav-links a{padding:10px 8px;font-size:12px}.tt-site{margin:0;max-width:none;border-radius:0}}
+@media(max-width:760px){.tt-masthead{grid-template-columns:1fr;gap:12px;text-align:center;padding:16px $(site.padding)}.tt-brand-stack{align-items:center}.tt-brand-stack .tt-top-links-static{justify-content:center}.tt-banner-slot{justify-content:center}.tt-nav{margin:0;padding:0 10px}.tt-nav .tt-nav-section{display:none}.tt-nav.tt-menu-open .tt-nav-section{display:block}.tt-nav .tt-nav-links a{padding:10px 14px}.tt-nav .tt-nav-links a:after{display:none}.tt-search{position:absolute;top:8px;left:10px;max-width:185px}.tt-home-intro{padding:17px 21px}.tt-footer .tt-foot-col:before{right:0;left:0}}
+@media(max-width:560px){.tt-brand-stack .tt-logo{font-size:24px}.tt-brand-stack #tt_topline{font-size:10px}.tt-masthead{padding:13px 12px 17px}.tt-banner-placeholder{min-height:45px;font-size:10px}.tt-content{padding:15px 12px 24px}.tt-home-intro{margin-bottom:13px;padding:16px 17px}.tt-home-intro h2{font-size:19px}.tt-home-intro p{font-size:12px}.tt-quickbar{margin-bottom:16px}.tt-post-card{display:flex;flex-direction:column}.tt-post-card>.tt-thumb{width:100%;flex-basis:auto;aspect-ratio:16/9}.tt-post-card>.tt-post-info{padding:15px}.tt-nav .tt-nav-section{background:$(mobile.nav.back)}.tt-post-actions{flex-wrap:wrap}.tt-footer{padding:25px 15px 16px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{transition:none!important;animation:none!important}.tt-post-card:hover,.tt-quick-links a:hover,.tt-brand-stack .tt-top-links-static a:hover{transform:none!important}}
+@media print{.tt-home-intro,.tt-quickbar,.tt-banner-placeholder,.tt-more-topics{display:none!important}.tt-masthead{background:none!important;color:black!important;box-shadow:none!important}.tt-article{box-shadow:none!important}}
+]]></b:skin>
+</head>
+<body>
+<b:class cond="data:skin.vars.body_background.image" name="tt-has-background-image"/>
+<div class="tt-site">
+<a href="#maincontent" class="tt-skip-link">تخطي إلى المقالات</a><header class="tt-masthead">
+  <div class="tt-brand-stack"><b:section id="tt_logo" name="01 - شعار المدونة (صورة اللوجو)" maxwidgets="1" showaddelement="no">
+    <b:widget id="Header1" title="شعار Techno Tour" type="Header" locked="false" version="2" visible="true">
+      <b:includable id="main"><a class="tt-logo" expr:href="data:blog.homepageUrl" expr:title="data:blog.title">
+        <b:if cond="data:useImage"><img expr:alt="data:blog.title" expr:src="data:sourceUrl"/><b:else/><span class="tt-mark">TT</span><span><data:blog.title/><small class="tt-description">شروحات تقنية وحلول مشاكل</small></span></b:if>
+      </a></b:includable>
+    </b:widget>
+  </b:section>
+  <b:section id="tt_topline" name="00 - النص العلوي (يمكن تعديله)" showaddelement="yes" maxwidgets="1">
+    <b:widget id="Text1" title="رسالة الشريط العلوي" type="Text" locked="false" version="2" visible="true">
+      <b:widget-settings><b:widget-setting name="content">TECHNO TOUR | شروحات عملية، حلول واضحة</b:widget-setting></b:widget-settings>
+      <b:includable id="main"><data:content/></b:includable>
+    </b:widget>
+  </b:section>
+  <b:section id="tt_top_social" name="00 - الروابط العلوية" showaddelement="yes" maxwidgets="1">
+    <b:widget id="LinkList2" title="روابط يوتيوب وفيسبوك" type="LinkList" locked="false" version="2" visible="true">
+      <b:widget-settings>
+        <b:widget-setting name="link-0">https://www.youtube.com/@TechnoTourOfficial</b:widget-setting><b:widget-setting name="text-0">يوتيوب</b:widget-setting>
+        <b:widget-setting name="link-1">https://www.facebook.com/groups/technotour</b:widget-setting><b:widget-setting name="text-1">فيسبوك</b:widget-setting>
+        <b:widget-setting name="sorting">NONE</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id="main"><ul class="tt-top-links-static"><b:loop values="data:links" var="link"><li><a expr:href="data:link.target" rel="noopener noreferrer" target="_blank"><data:link.name/></a></li></b:loop></ul></b:includable>
+    </b:widget>
+  </b:section>
+</div><div class="tt-banner-slot"><b:section class="tt-ad-region tt-ads-header" id="tt_ads_header" name="02 - اعلان بجوار اللوجو 728x90" showaddelement="yes" maxwidgets="2"/></div>
+</header>
+<nav aria-label="القائمة الرئيسية" class="tt-nav" id="ttNav">
+<button aria-controls="ttNavItems" aria-expanded="false" aria-label="فتح القائمة" class="tt-menu-toggle" id="ttMenuToggle" type="button">☰</button>
+<div class="tt-nav-section" id="ttNavItems"><b:section id="tt_navigation" name="03 - روابط القائمة الرئيسية" maxwidgets="1" showaddelement="yes">
+<b:widget id="LinkList1" type="LinkList" locked="false" title="روابط القائمة الرئيسية" version="2" visible="true">
+<b:widget-settings><b:widget-setting name="link-0">/</b:widget-setting><b:widget-setting name="text-0">الرئيسية</b:widget-setting>
+<b:widget-setting name="link-1">/search/label/شروحات الكومبيوتر وحل مشاكلة</b:widget-setting><b:widget-setting name="text-1">ويندوز والكمبيوتر</b:widget-setting>
+<b:widget-setting name="link-2">/search/label/شروحات البرامج ومشاكلها</b:widget-setting><b:widget-setting name="text-2">البرامج</b:widget-setting>
+<b:widget-setting name="link-3">/search/label/مواضيع الالعاب</b:widget-setting><b:widget-setting name="text-3">الألعاب</b:widget-setting>
+<b:widget-setting name="link-4">/search/label/شروحات الموبايل ومشاكلة</b:widget-setting><b:widget-setting name="text-4">الموبايل</b:widget-setting>
+<b:widget-setting name="link-5">/search/label/الربح من الأنترنت</b:widget-setting><b:widget-setting name="text-5">الربح من الإنترنت</b:widget-setting><b:widget-setting name="sorting">NONE</b:widget-setting></b:widget-settings>
+<b:includable id="main"><ul class="tt-nav-links"><b:loop values="data:links" var="link"><li><a expr:href="data:link.target"><data:link.name/></a></li></b:loop></ul></b:includable>
+</b:widget>
+</b:section></div>
+<form action="/search" class="tt-search" method="get" role="search"><input aria-label="بحث في المدونة" name="q" placeholder="ابحث هنا..." type="search"/><button aria-label="بحث" type="submit">⚲</button></form>
+</nav>
+<b:section class="tt-ad-region tt-ads-below-nav" id="tt_ads_below_nav" name="04 - اعلان تحت القائمة الرئيسية" showaddelement="yes" maxwidgets="2"/>
+<div class="tt-content">
+  <b:if cond="data:view.isHomepage or data:view.isLayoutMode"><div class="tt-home-intro"><b:section id="tt_home_intro" name="03B - مقدمة الرئيسية (يمكن تعديلها او إخفاؤها)" showaddelement="yes" maxwidgets="2"><b:widget id="HTML103" title="مقدمة Techno Tour" type="HTML" version="2" visible="true" locked="false"><b:widget-settings><b:widget-setting name="content">&lt;span class="tt-intro-kicker"&gt;TECHNO TOUR · حلول تقنية&lt;/span&gt;&lt;h2&gt;حلول أوضح. تجربة أسرع.&lt;/h2&gt;&lt;p&gt;شروحات الكمبيوتر والبرامج والألعاب، خطوة بخطوة ومن غير تعقيد.&lt;/p&gt;</b:widget-setting></b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></div></b:if><b:if cond="data:view.isHomepage or data:view.isLayoutMode"><div class="tt-quickbar"><div class="tt-quick-title">دليلك لحلول التكنولوجيا <span aria-hidden="true">✦</span></div><b:section id="tt_quick_links" name="03A - روابط سريعة تحت القائمة" showaddelement="yes" maxwidgets="2"><b:widget id="LinkList5" type="LinkList" title="روابط سريعة" version="2" visible="true" locked="false"><b:widget-settings><b:widget-setting name="link-0">/search/label/شروحات الكومبيوتر وحل مشاكلة</b:widget-setting><b:widget-setting name="text-0">🖥️ الكمبيوتر</b:widget-setting><b:widget-setting name="link-1">/search/label/مواضيع الالعاب</b:widget-setting><b:widget-setting name="text-1">🎮 الألعاب</b:widget-setting><b:widget-setting name="link-2">/search/label/شروحات البرامج ومشاكلها</b:widget-setting><b:widget-setting name="text-2">⚙️ البرامج</b:widget-setting><b:widget-setting name="sorting">NONE</b:widget-setting></b:widget-settings><b:includable id="main"><ul class="tt-quick-links"><b:loop values="data:links" var="link"><li><a expr:href="data:link.target"><data:link.name/></a></li></b:loop></ul></b:includable></b:widget></b:section></div></b:if><b:if cond="data:view.isHomepage or data:view.isLayoutMode"><b:section id="tt_featured" name="05 - مقالات مميزة اختيارية" showaddelement="yes" maxwidgets="2"><b:widget id="FeaturedPost2" type="FeaturedPost" title="اختيار المحرر" locked="false" version="2" visible="true"><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></b:if>
+  <div class="tt-grid">
+    <main class="tt-main" id="maincontent">
+      <b:if cond="data:view.isMultipleItems or data:view.isLayoutMode"><b:section class="tt-ad-region tt-ads-body" id="tt_ads_feed_top" name="06 - اعلان فوق آخر المقالات" showaddelement="yes" maxwidgets="2"/></b:if>
+      <b:if cond="data:view.isSingleItem or data:view.isLayoutMode"><b:section class="tt-ad-region tt-ads-body" id="tt_ads_article_top" name="07 - اعلان أعلى صفحة المقال" showaddelement="yes" maxwidgets="2"/></b:if>
+      <b:section id="tt_blog_posts" name="08 - المقالات (مدونة Blogger)" showaddelement="no" maxwidgets="1">
+        <b:widget id="Blog1" locked="true" title="مقالات Techno Tour" type="Blog" version="2" visible="true">
+          <b:includable id="main" var="this">
+            <b:if cond="data:view.isHomepage"><h2 class="tt-section-title">آخر المشاركات</h2><b:elseif cond="data:view.isLabelSearch"/><h2 class="tt-section-title">موضوعات القسم: <data:view.search.label/></h2><b:elseif cond="data:view.isSearch"/><h2 class="tt-section-title">نتائج البحث</h2></b:if>
+            <b:if cond="data:view.isMultipleItems">
+              <div class="tt-posts-grid">
+                <b:loop values="data:posts" var="post">
+                  <article class="tt-post-card">
+                    <a class="tt-thumb" expr:href="data:post.url" expr:title="data:post.title">
+                      <b:if cond="data:post.featuredImage"><img expr:alt="data:post.title" expr:src="resizeImage(data:post.featuredImage, 640, &quot;16:9&quot;)" loading="lazy"/><b:elseif cond="data:post.thumbnailUrl"/><img expr:alt="data:post.title" expr:src="data:post.thumbnailUrl" loading="lazy"/><b:else/><span class="tt-no-thumb">Techno Tour</span></b:if>
+                    </a>
+                    <div class="tt-post-info">
+                      <b:if cond="data:post.labels.any"><a class="tt-category" expr:href="data:post.labels.first.url"><data:post.labels.first.name/></a></b:if><h3 class="tt-post-title"><a expr:href="data:post.url"><data:post.title/></a></h3>
+                      <span class="tt-date"><b:eval expr="format(data:post.date, &quot;dd MMM yyyy&quot;)"/></span>
+                      <p class="tt-snippet"><b:eval expr="data:post.snippets.long snippet { length: 160, links: false, linebreaks: false, ellipsis: true }"/></p>
+                      <div class="tt-post-actions"><a class="tt-read-more" expr:href="data:post.url">اقرأ الشرح <span aria-hidden="true">‹</span></a><a class="tt-mini-action" expr:href="&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url" rel="noopener noreferrer" target="_blank">مشاركة</a><a class="tt-mini-action" expr:href="&quot;https://api.whatsapp.com/send?text=&quot; + data:post.url" rel="noopener noreferrer" target="_blank">واتساب</a></div></div>
+                  </article>
+                </b:loop>
+              </div>
+              <nav aria-label="صفحات المقالات" class="tt-pagination">
+                <b:if cond="data:newerPageUrl"><a expr:href="data:newerPageUrl">الأحدث</a></b:if>
+                <b:if cond="data:olderPageUrl"><a expr:href="data:olderPageUrl">المزيد من المقالات</a></b:if>
+              </nav>
+            <b:else/>
+              <b:loop values="data:posts" var="post">
+                <article class="tt-article">
+                  <h1><data:post.title/></h1>
+                  <div class="tt-article-meta"><span>Techno Tour</span><time><b:eval expr="format(data:post.date, &quot;dd MMM yyyy&quot;)"/></time></div>
+                  <div class="tt-article-body"><data:post.body/></div>
+                  <div class="tt-article-share"><span>شارك المقال:</span><a expr:href="&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url" rel="noopener noreferrer" target="_blank">فيسبوك</a><a expr:href="&quot;https://api.whatsapp.com/send?text=&quot; + data:post.url" rel="noopener noreferrer" target="_blank">واتساب</a><button class="tt-share-copy" type="button" onclick="ttCopyLink(this)">نسخ الرابط</button><button class="tt-share-print" type="button" onclick="window.print()">طباعة</button></div>
+                  <b:if cond="data:post.labels.any"><div class="tt-labels"><strong>وسوم المقال:</strong><b:loop values="data:post.labels" var="label"><a expr:href="data:label.url" rel="tag"><data:label.name/></a></b:loop></div></b:if>
+                  <b:if cond="data:post.allowComments">
+                    <section class="tt-comments" id="comments"><h2>التعليقات (<data:post.numberOfComments/>)</h2>
+                      <b:if cond="data:post.showThreadedComments"><div id="comment-holder"><data:post.commentHtml/></div><b:else/><b:loop values="data:post.comments" var="comment"><div class="comment" expr:id="&quot;c&quot; + data:comment.id"><b class="comment-author"><data:comment.author/></b><div class="comment-body"><data:comment.body/></div><a class="comment-time" expr:href="data:comment.url"><data:comment.timestamp/></a></div></b:loop></b:if>
+                      <b:if cond="data:post.allowNewComments">
+                        <b:if cond="data:post.embedCommentForm">
+                          <div class="comment-form" id="comment-form">
+                            <a expr:href="data:post.commentFormIframeSrc" id="comment-editor-src"/>
+                            <iframe allowtransparency="true" expr:height="data:cmtIframeInitialHeight ?: &quot;90px&quot;" frameborder="0" id="comment-editor" name="comment-editor" src="" width="100%"/>
+                            <script type="text/javascript">BLOG_CMT_createIframe('<data:post.appRpcRelayPath/>');</script>
+                          </div>
+                        <b:else/><a expr:href="data:post.commentsUrl" rel="nofollow noreferrer" target="_blank">أضف تعليقًا</a></b:if>
+                      <b:else/><p><data:post.noNewCommentsText/></p></b:if>
+                    </section>
+                  </b:if>
+                </article>
+              </b:loop>
+            </b:if>
+          </b:includable>
+        </b:widget>
+      </b:section>
+      <b:if cond="data:view.isPost or data:view.isLayoutMode"><div class="tt-more-topics"><b:section id="tt_related_links" name="08B - مقالات أو أقسام مرتبطة (صفحة المقال)" showaddelement="yes" maxwidgets="4"><b:widget id="LinkList6" title="تابع القراءة" type="LinkList" version="2" visible="true" locked="false"><b:widget-settings><b:widget-setting name="link-0">/search/label/شروحات الكومبيوتر وحل مشاكلة</b:widget-setting><b:widget-setting name="text-0">ويندوز وحل المشاكل</b:widget-setting><b:widget-setting name="link-1">/search/label/شروحات البرامج ومشاكلها</b:widget-setting><b:widget-setting name="text-1">شروحات البرامج</b:widget-setting><b:widget-setting name="sorting">NONE</b:widget-setting></b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></div></b:if><b:if cond="data:view.isSingleItem or data:view.isLayoutMode"><b:section class="tt-ad-region tt-ads-bottom" id="tt_ads_article_bottom" name="09 - اعلان اسفل المقال" showaddelement="yes" maxwidgets="2"/></b:if>
+      <b:if cond="data:view.isMultipleItems or data:view.isLayoutMode"><b:section class="tt-ad-region tt-ads-bottom" id="tt_ads_feed_bottom" name="10 - اعلان أسفل صفحة المقالات" showaddelement="yes" maxwidgets="2"/></b:if>
+    </main>
+    <aside aria-label="الشريط الجانبي" class="tt-sidebar">
+      <b:section class="tt-ad-region" id="tt_ads_sidebar_top" name="11 - اعلان اعلى الشريط الجانبي" showaddelement="yes" maxwidgets="2"/>
+      <b:section id="tt_sidebar_social" class="tt-social-group" name="12A - تابع Techno Tour" showaddelement="yes" maxwidgets="3"><b:widget id="LinkList3" type="LinkList" title="تابعنا على السوشيال" locked="false" version="2" visible="true"><b:widget-settings><b:widget-setting name="link-0">https://www.youtube.com/@TechnoTourOfficial</b:widget-setting><b:widget-setting name="text-0">▶ يوتيوب</b:widget-setting><b:widget-setting name="link-1">https://www.facebook.com/groups/technotour</b:widget-setting><b:widget-setting name="text-1">f فيسبوك</b:widget-setting><b:widget-setting name="sorting">NONE</b:widget-setting></b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section><b:section id="tt_sidebar_widgets" name="12 - أدوات الشريط الجانبي" showaddelement="yes" maxwidgets="15">
+        <b:widget id="PopularPosts1" title="المشاركات الشائعة" type="PopularPosts" locked="false" version="2" visible="true"><b:widget-settings>
+                  <b:widget-setting name="numItemsToShow">5</b:widget-setting>
+                  <b:widget-setting name="showThumbnails">true</b:widget-setting>
+                  <b:widget-setting name="showSnippets">true</b:widget-setting>
+                  <b:widget-setting name="timeRange">LAST_WEEK</b:widget-setting>
+                </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget>
+      <b:widget id="FeaturedPost1" type="FeaturedPost" title="مشاركة مميزة" locked="false" version="2" visible="true"><b:widget-settings>
+              <b:widget-setting name="showSnippet">false</b:widget-setting>
+              <b:widget-setting name="showPostTitle">true</b:widget-setting>
+              <b:widget-setting name="postId">1644578600556962656</b:widget-setting>
+              <b:widget-setting name="showFirstImage">true</b:widget-setting>
+              <b:widget-setting name="useMostRecentPost">true</b:widget-setting>
+            </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget><b:widget id="Label3" type="Label" title="التسميات / الأقسام" locked="false" version="2" visible="true"><b:widget-settings>
+                  <b:widget-setting name="sorting">ALPHA</b:widget-setting>
+                  <b:widget-setting name="display">LIST</b:widget-setting>
+                  <b:widget-setting name="selectedLabelsList"/>
+                  <b:widget-setting name="showType">ALL</b:widget-setting>
+                  <b:widget-setting name="showFreqNumbers">true</b:widget-setting>
+                </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget><b:widget id="Stats1" type="Stats" title="زوار المدونة" locked="false" version="2" visible="true"><b:widget-settings>
+              <b:widget-setting name="showGraphicalCounter">false</b:widget-setting>
+              <b:widget-setting name="showAnimatedCounter">false</b:widget-setting>
+              <b:widget-setting name="showSparkline">true</b:widget-setting>
+              <b:widget-setting name="sparklineStyle">WHITE_TRANSPARENT</b:widget-setting>
+              <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
+            </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section>
+      <b:section class="tt-ad-region" id="tt_ads_sidebar_bottom" name="13 - اعلان اسفل الشريط الجانبي" showaddelement="yes" maxwidgets="2"/>
+    </aside>
+  </div>
+</div>
+<footer class="tt-footer">
+  <b:section class="tt-ad-region" id="tt_ads_footer" name="14 - اعلان قبل التذييل" showaddelement="yes" maxwidgets="2"/>
+  <div class="tt-footer-grid tt-footer-rich">
+    <div class="tt-foot-col"><b:section id="tt_footer_about" name="17 - تعريف المدونة" showaddelement="yes" maxwidgets="5"><b:widget id="HTML101" type="HTML" title="عن Techno Tour" locked="false" version="2" visible="true"><b:widget-settings><b:widget-setting name="content">&lt;h3&gt;Techno Tour&lt;/h3&gt;&lt;p&gt;شروحات تقنية وحلول للمشاكل بالخطوات، ومقالات داعمة لفيديوهات القناة.&lt;/p&gt;</b:widget-setting></b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget><b:widget id="LinkList4" type="LinkList" title="تابعنا على الشبكات" locked="false" version="2" visible="true"><b:widget-settings><b:widget-setting name="link-0">https://www.youtube.com/@TechnoTourOfficial</b:widget-setting><b:widget-setting name="text-0">▶ يوتيوب</b:widget-setting><b:widget-setting name="link-1">https://www.facebook.com/groups/technotour</b:widget-setting><b:widget-setting name="text-1">f فيسبوك</b:widget-setting><b:widget-setting name="sorting">NONE</b:widget-setting></b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></div><div class="tt-foot-col"><b:section id="tt_footer_links" name="15 - أقسام وروابط مهمة" showaddelement="yes" maxwidgets="5"><b:widget id="Label1" type="Label" title="تصفح الأقسام" locked="false" version="2" visible="true"><b:widget-settings>
+            <b:widget-setting name="sorting">ALPHA</b:widget-setting>
+            <b:widget-setting name="display">CLOUD</b:widget-setting>
+            <b:widget-setting name="selectedLabelsList"/>
+            <b:widget-setting name="showType">ALL</b:widget-setting>
+            <b:widget-setting name="showFreqNumbers">false</b:widget-setting>
+          </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget><b:widget id="PageList1" type="PageList" title="صفحات المدونة" locked="false" version="2" visible="true"><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></div><div class="tt-foot-col"><b:section id="tt_footer_custom" name="16 - تواصل معنا" showaddelement="yes" maxwidgets="5"><b:widget id="ContactForm1" type="ContactForm" title="تواصل معنا" locked="false" version="2" visible="true"><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></div><div class="tt-foot-col"><b:section id="tt_footer_more" name="19 - زوار وتدوينات مميزة" showaddelement="yes" maxwidgets="5"><b:widget id="Stats2" type="Stats" title="عدد الزيارات" locked="false" version="2" visible="true"><b:widget-settings>
+              <b:widget-setting name="showGraphicalCounter">false</b:widget-setting>
+              <b:widget-setting name="showAnimatedCounter">false</b:widget-setting>
+              <b:widget-setting name="showSparkline">true</b:widget-setting>
+              <b:widget-setting name="sparklineStyle">WHITE_TRANSPARENT</b:widget-setting>
+              <b:widget-setting name="timeRange">ALL_TIME</b:widget-setting>
+            </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget><b:widget id="FeaturedPost3" type="FeaturedPost" title="مقال مميز" locked="false" version="2" visible="true"><b:widget-settings>
+              <b:widget-setting name="showSnippet">false</b:widget-setting>
+              <b:widget-setting name="showPostTitle">true</b:widget-setting>
+              <b:widget-setting name="postId">1644578600556962656</b:widget-setting>
+              <b:widget-setting name="showFirstImage">true</b:widget-setting>
+              <b:widget-setting name="useMostRecentPost">true</b:widget-setting>
+            </b:widget-settings><b:includable id="main"><b:include name="super.main"/></b:includable></b:widget></b:section></div></div>
+  <div class="tt-footer-bottom"><b:section id="tt_footer_copyright" name="18 - حقوق النشر" showaddelement="yes" maxwidgets="1">
+    <b:widget id="Text2" title="نص الحقوق" type="Text" locked="false" version="2" visible="true">
+      <b:widget-settings><b:widget-setting name="content">جميع الحقوق محفوظة © Techno Tour</b:widget-setting></b:widget-settings>
+      <b:includable id="main"><data:content/></b:includable>
+    </b:widget>
+  </b:section><a expr:href="data:blog.homepageUrl">العودة للرئيسية</a></div>
+</footer>
+</div>
+<button type="button" id="ttBackToTop" class="tt-to-top" aria-label="العودة للأعلى" title="العودة للأعلى">↑</button><script type="text/javascript"><![CDATA[
+(function(){var b=document.getElementById('ttMenuToggle'),n=document.getElementById('ttNav');if(b&&n){b.addEventListener('click',function(){var open=n.classList.toggle('tt-menu-open');b.setAttribute('aria-expanded',open?'true':'false')})}})();
+
+function ttCopyLink(button){var url=location.href;function done(){var old=button.textContent;button.textContent='تم نسخ الرابط ✓';setTimeout(function(){button.textContent=old},1700)}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(url).then(done).catch(function(){prompt('انسخ الرابط:',url)})}else{prompt('انسخ الرابط:',url)}}
+(function(){var up=document.getElementById('ttBackToTop');if(!up)return;window.addEventListener('scroll',function(){up.classList.toggle('tt-is-visible',scrollY>350)},{passive:true});up.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})})();
+]]></script>
+</body></html>
