@@ -1506,7 +1506,7 @@ body #tt-v8-masthead #Header1 img{
 
 /* Keep the working original green WhatsApp share button, with WhatsApp glyph. */
 .topic-share .social li a.tt-wa-link{background-color:#189d0e!important;color:#ffffff!important;min-width:120px!important}
-.topic-share .social li a.tt-wa-link:before{content:'\\f232'!important;font-family:FontAwesome!important;color:#ffffff!important}
+.topic-share .social li a.tt-wa-link:before{content:'\f232'!important;font-family:FontAwesome!important;color:#ffffff!important}
 .topic-share .social li a.tt-wa-link:hover:before{color:#189d0e!important}
 
 ]]></b:skin>
