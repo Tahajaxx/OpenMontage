@@ -1949,7 +1949,7 @@ body #tt-v8-masthead #Header1 img{
  font:700 19px/1.7 'Cairo',Tahoma,Arial,sans-serif!important;
 }
 .topic-comments > .headline h6:before{
- content:'\\f086'!important;
+ content:'\f086'!important;
  font:normal normal normal 19px/1 FontAwesome!important;
  color:#128bdc!important;
 }
